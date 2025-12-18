@@ -87,7 +87,7 @@ def build_stats(users, post_id):
         else:
             stats['sex']['unknown'] += 1
 
-        # Обработка возраста
+        
         age = get_age(user.get('bdate'))
         if age is None:
             stats['age']['unknown'] += 1
@@ -137,4 +137,5 @@ if __name__ == "__main__":
 
         save_to_file(result_stats, OUTPUT_FILE)
     else:
+
         print("Лайков не найдено или ошибка доступа.")
